@@ -1,6 +1,8 @@
 # Master's thesis: Modelling Chart Trajectories using Song Features
 This will be my attempt at making the code from my [master's thesis](https://uwspace.uwaterloo.ca/handle/10012/14937) avaiable for those who are curious and/or want to dabble into music information retrieval. I've simplified some of the pathing and updated some comments to make things more readable. 
 
+I presented on August 16, 2019 ([announcement](https://uwaterloo.ca/artificial-intelligence-group/events/masters-thesis-presentation-modelling-chart-trajectories)). My slides can be found [here](thesis_presentation_08_16_19.pdf) (I did have one typo, a duplicate figure, that I've since corrected). 
+
 # Data acquisition
 1. Chart data: [billboard.py](https://github.com/guoguo12/billboard-charts), [weekly Billboard Hot 100](https://www.billboard.com/charts/hot-100/1958-08-04)
 2. Lyrics data: Musixmatch, [the Million Song Dataset](http://millionsongdataset.com/)
