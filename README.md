@@ -11,7 +11,7 @@ This will be my attempt at making the code from my [master's thesis](https://uws
 
 # Pre-processing
 1. similarity measure 
-2. LDA topic modelling of BOW lyrics
+2. [LDA topic modelling](http://mallet.cs.umass.edu/download.php) of BOW lyrics
 3. normalizing features
 4. matching records
 
