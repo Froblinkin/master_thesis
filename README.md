@@ -14,6 +14,7 @@ This will be my attempt at making the code from my [master's thesis](https://uws
 2. [LDA topic modelling](http://mallet.cs.umass.edu/download.php) of BOW lyrics
 3. normalizing features
 4. matching records
+5. genre labelling 
 
 # Modeling (regression models as classifiers given some separator)
 1. logistic regression
