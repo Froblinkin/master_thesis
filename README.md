@@ -10,10 +10,10 @@ This will be my attempt at making the code from my [master's thesis](https://uws
 
 # Pre-processing
 1. similarity measure inspired by [Askin & Mauskapf](https://journals.sagepub.com/doi/abs/10.1177/0003122417728662)
-2. [LDA topic modelling](http://mallet.cs.umass.edu/download.php) of BOW lyrics
+2. [LDA topic modelling](http://mallet.cs.umass.edu) of BOW lyrics
 3. normalizing features
 4. matching records
-5. genre labelling 
+5. [genre labelling](https://developer.spotify.com/documentation/web-api/reference/artists/get-artist/) 
 
 # Modeling (regression models as classifiers given some separator)
 1. logistic regression
