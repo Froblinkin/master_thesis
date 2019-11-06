@@ -3,9 +3,9 @@ This will be my attempt at making the code from my [master's thesis](https://uws
 
 In my thesis, I proposed two target variables for modelling hits and flops, which I then attemped to model with various forms of logistic regression.
 
-![comparison](comparing_binary.png){:height="50%" width="50%"}
+<img src="comparing_binary.png" width="400" />
 
-I presented it on August 16, 2019 ([announcement](https://uwaterloo.ca/artificial-intelligence-group/events/masters-thesis-presentation-modelling-chart-trajectories)). My slides can be found [here](http://www.jperrie.com/thesis_presentation_08_16_19.pdf) (I did have one typo, a duplicate figure, that I've since corrected). 
+I presented it on August 16, 2019 ([announcement](https://uwaterloo.ca/artificial-intelligence-group/events/masters-thesis-presentation-modelling-chart-trajectories)). My slides can be found [here](http://www.jperrie.com/thesis_presentation_08_16_19.pdf).
 
 # Data acquisition
 1. Chart data: [billboard.py](https://github.com/guoguo12/billboard-charts), [weekly Billboard Hot 100](https://www.billboard.com/charts/hot-100/1958-08-04)
