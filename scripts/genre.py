@@ -34,7 +34,7 @@ df=pd.concat(frame)
 df=df.dropna().reset_index()
 
 # Custom genres based on Spotify tags selected because they are substrings of some popular tags
-genres=['rap','rock','metal','folk','country','blues','r&b','disco','pop','none']
+genres=['hip','rap','rock','metal','folk','country','blues','r&b','soul','disco','funk','pop','none']
 count_list=[]
 
 # Finding most frequent Spotify tags 
@@ -57,7 +57,7 @@ for g in genres:
 	b=Counter(b)
 	for w in b:
 		b[w]=tuple([b[w]/float(b_len)*math.log(a_len)/(1+a[w]),a[w]])
-	count_list.append(b.most_common(30))
+	count_list.append(b.most_common(10))
 
 genre_dict={}
 for idx,g in enumerate(genres):
@@ -114,7 +114,6 @@ import seaborn as sns
 
 # Genre overlap based on tags 
 mat=np.zeros([len(genre_dict),len(genre_dict)])
-
 for idx,x in enumerate(genres):
 	for idy,y in enumerate(genres):
 		mat[idx,idy]=len([l1 for l1 in genre_dict[x] if l1[0] in [l2[0] for l2 in genre_dict[y]]])
@@ -122,7 +121,7 @@ for idx,x in enumerate(genres):
 genres[0]='hip hop'
 genres[7]='R&B'
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(8,6))
 sns.heatmap(mat,cmap=sns.cm.rocket_r)
 
 for axis in [ax.xaxis, ax.yaxis]:
@@ -130,13 +129,19 @@ for axis in [ax.xaxis, ax.yaxis]:
 plt.xticks(rotation=45) 
 plt.yticks(rotation=0) 
 plt.ylabel('Genre') 
-plt.xlabel('Genre') 
 
 # Genre distributions
-fig, ax = plt.subplots()	
+fig, ax = plt.subplots(figsize=(6,12))	
 df.genre.hist(bins=np.arange(2*len(genres))-0.5)
+df[df.crossover==1].genre.hist(bins=np.arange(2*len(genres)-2)-0.5)
+
 plt.xticks(np.arange(len(genres)),genres,rotation=45) 
 plt.xlim([-1,len(genres)+1])
 plt.ylabel('Count')
-plt.xlabel('Genre') 
+plt.xlabel('Genre')
+plt.xticks(np.arange(len(genres)),genres,rotation=45) 
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.grid(False)
+plt.legend(['Count','Crossover']) 
 plt.show()
