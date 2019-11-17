@@ -30,3 +30,8 @@ I presented it on August 16, 2019 ([announcement](https://uwaterloo.ca/artificia
 1. Histogram distributions
 2. Chart trajectories
 3. Cluster analysis
+
+# General workflow 
+```
+python billboard.py
+```
