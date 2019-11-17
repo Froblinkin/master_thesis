@@ -63,5 +63,5 @@ python temp_anal.py (temporal analysis of model features)
 Rscript generalized_compare.R (binary classification logistic regression modeling)
 Rscript generalized_lasso.R (interval target variable lasso logistic regression modeling)
 Rscript multi_lasso_align.R (multi-class one-against-all lasso logistic regression modeling)
-Rscript paper_1_analysis.R (critique ordered logit modeling)
+Rscript paper_1_analysis.R # (critique ordered logit modeling)
 ```
