@@ -2,7 +2,7 @@
 
 require(dtw)
 
-path="Documents/thesis_project/data/ts_ngp.tsv"
+path="data/ts_ngp.tsv"
 dat<-readLines(path)
 dat<-strsplit(dat,'\t')
 dm<-matrix(0,length(dat),length(dat))
@@ -16,4 +16,4 @@ for (i in seq(length(dat))){
 }
 
 # Write to file
-write.table(dm,file="Documents/thesis_project/data/dtw_dm.tsv",sep="\t",row.names=FALSE,col.names=FALSE)
+write.table(dm,file="data/dtw_dm.tsv",sep="\t",row.names=FALSE,col.names=FALSE)

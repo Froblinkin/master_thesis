@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import csv
 
 # Song records 
-path_tm="data/final/model1_data.tsv"
+path_tm="data/model1_data.tsv"
 df=pd.read_csv(path_tm,sep='\t',encoding='utf8')
 
 # Time series 
-path='data/no_folder/ts_ngp.tsv'
+path='data/ts_ngp.tsv'
 ts=[]
 with open(path,'rb') as f:    
 	reader=csv.reader(f,delimiter='\t')

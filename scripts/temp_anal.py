@@ -17,7 +17,7 @@ from scipy.spatial.distance import pdist
 from collections import Counter
 
 # Read in the data 
-filename='data/final/model_tm.tsv'
+filename='data/model_tm.tsv'
 df=pd.read_csv(filename,sep="\t",index_col=0)
 df.index=pd.to_datetime(df.index)
 song_count=(df.hip+df.rap+df.rock+df.metal+df.folk+df.country+df.blues+df['r&b']+df.soul+df.disco+df.funk+df['pop']+df['none']).values
@@ -56,7 +56,7 @@ ax.set_ylabel('Abundance')
 plt.show()
 
 # Illustrate the notion of topic decomposition
-filename='data/final/model_tm1.tsv'
+filename='data/model_tm1.tsv'
 df=pd.read_csv(filename,sep="\t",index_col=0)
 df.index=pd.to_datetime(df.index)
 df=df[df.index<'2011-01-01']
@@ -66,7 +66,7 @@ fig, ax = plt.subplots()
 
 # Mixture from 10 topic model 
 ax.plot(df['0'],label='topic 0, 10 topic LDA',alpha=0.75)
-filename='data/final/model_tm1.tsv'
+filename='data/model_tm1.tsv'
 df_topic10=df.copy()
 df=pd.read_csv(filename,sep="\t",index_col=0)
 df.index=pd.to_datetime(df.index)
@@ -102,7 +102,7 @@ for i in range(20):
 					print(str(i)+" "+str(j)+" "+str(k)+" "+str(l))
 
 # Get topic mixtures for clusteirng 
-filename='data/final/model_tm3.tsv'
+filename='data/model_tm3.tsv'
 df=pd.read_csv(filename,sep="\t",index_col=0)
 df.index=pd.to_datetime(df.index)
 df=df[df.index<'2011-01-01']

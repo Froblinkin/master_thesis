@@ -11,11 +11,11 @@ import string
 
 
 # Get chart records 
-chart_path='data/no_folder/chart_record.tsv'
+chart_path='data/chart_record.tsv'
 chart=pd.read_csv(chart_path,sep='\t',index_col=0,encoding='utf8')
 
 # Get artist song pairs 
-dpath='data/no_folder/genre_set.tsv'
+dpath='data/genre_set.tsv'
 df=pd.read_csv(dpath,sep='\t',encoding='utf8')
 df=df[['artist','title']]
 

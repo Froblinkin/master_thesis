@@ -94,7 +94,7 @@ for i in range(42):
 	if i not in cmb_count:
 		cmb_count[i]=0
 cmb_count=np.array(list(cmb_count.values())).reshape((7,6))
-np.savetxt("data/combined_count.csv",cmb_count,delimiter=',')
+np.savetxt("data/combined_count2.csv",cmb_count,delimiter=',')
 
 # Write cluster labels to song record DataFrame 
 df.to_csv('data/clustered_df.tsv',sep='\t',index=False,encoding='utf8')

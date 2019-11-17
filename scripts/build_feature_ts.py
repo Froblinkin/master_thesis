@@ -129,4 +129,4 @@ for d in dates:
 	df_features.loc[d]=df_sub.sum()/np.array([len(df_sub) if f not in genres else 1 for f in features])
 
 # Write to file
-df_features.to_csv('data/final/model_tm1.tsv',sep='\t',index=True,encoding='utf8')
+df_features.to_csv('data/model_tm1.tsv',sep='\t',index=True,encoding='utf8')
