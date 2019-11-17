@@ -32,6 +32,46 @@ I presented it on August 16, 2019 ([announcement](https://uwaterloo.ca/artificia
 3. Cluster analysis
 
 # General workflow 
+### Data acquisition
 ```
-python billboard.py
+python billboard.py (get chart data)
+python control.py (get chart metadata controls)
+python BOW.py (get BOW)
+python spotify.py (get Spotify IDs)
+python echo_genre_features.py (get The Echo Nest features) 
+python genre.py (get Spotify genre tags)
+python discog_data.py (get Discog genre tags)
+```
+### Feature derivation
+```
+python build_ts.py (build chart time series)
+Rscript dtw_1.R (distance matrix)
+python cluster_target.py (clustering)
+python tm_prep.py (prepare BOW representation for topic model)
+javac topic_model.java (apply LDA)
+java topic_model (apply LDA)
+python typ_echo_ng_decay.py (similarity The Echo Nest)
+python typ_tm_ng_decay.py (similarity topic model)
+python typ_echo_paper.py (similarity critique)
+python typ_echo_paper_1b.py (similarity critique Spotify genres)
+```
+### Model pre-processing
+```
+python model_prep_paper.py (critique features)
+python model_prep_paper_1b.py (critique features Spotify genres)
+python build_feature_model.py (model features)
+python build_feature_ts.py (model features as time series)
+```
+### Visualizations 
+```
+python trajectory_snippet_comparing_ts.py (chart trajectory plotting)
+Rscript mosaic_anal.R (cluster labels as a mosaic plot)
+python temp_anal.py (temporal analysis of model features)
+```
+### Modeling 
+```
+Rscript generalized_compare.R (binary classification)
+Rscript generalized_lasso.R (interval target variable modeling)
+Rscript multi_lasso_align.R (multi-class modeling)
+Rscript paper_1_analysis.R (critique modeling)
 ```
