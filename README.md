@@ -21,16 +21,6 @@ I presented it on August 16, 2019 ([announcement](https://uwaterloo.ca/artificia
 4. Matching records
 5. [Genre labelling](https://developer.spotify.com/documentation/web-api/reference/artists/get-artist/) 
 
-# Modeling (regression models as classifiers given some separator)
-1. Logistic regression
-2. Regularized logistic regression
-3. One-against-all logistic regression
-
-# Visualizations 
-1. Histogram distributions
-2. Chart trajectories
-3. Cluster analysis
-
 # General workflow 
 ### Data acquisition
 ```
@@ -70,8 +60,8 @@ python temp_anal.py (temporal analysis of model features)
 ```
 ### Modeling 
 ```
-Rscript generalized_compare.R (binary classification)
-Rscript generalized_lasso.R (interval target variable modeling)
-Rscript multi_lasso_align.R (multi-class modeling)
-Rscript paper_1_analysis.R (critique modeling)
+Rscript generalized_compare.R (binary classification logistic regression modeling)
+Rscript generalized_lasso.R (interval target variable lasso logistic regression modeling)
+Rscript multi_lasso_align.R (multi-class one-against-all lasso logistic regression modeling)
+Rscript paper_1_analysis.R (critique ordered logit modeling)
 ```
